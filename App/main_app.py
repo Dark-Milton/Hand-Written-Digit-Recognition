@@ -5,8 +5,8 @@ from PIL import Image
 import tensorflow as tf
 import pickle
 
-st.title("Handwritten Digit Recognition")
-st.markdown("Upload an image")
+st.title("Handwritten Digit Recognition") # title of the page
+st.markdown("Upload an image") # paragraph
 
 
 
@@ -19,6 +19,7 @@ model = tf.keras.models.load_model("model")
 
 test_img = st.file_uploader("Choose a file...", type=["jpg", "jpeg", "png"])
 submit = st.button("Predict")
+
 if submit:
     if test_img is not None:
         imagefile = io.BytesIO(test_img.read())
